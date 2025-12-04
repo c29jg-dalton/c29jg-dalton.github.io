@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		.food{
+			width:100px;
+			height:100px;
+			background-image:url(https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUybm9wZHU0Nms2ZDYwZjI5cGxlZjdzYmJqYmR4YjlzY285cmsyd2ZobyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VsKvIB0zIJoOc/200w.gif);
+			background-size:contain;
+			background-repeat: no-repeat;
+			display:inline-block;
+		}
+
+
+	</style>
+</head>
+<body>
+<script type ="text/javascript">
+
+	document.addEventListener("keypress", function(){
+		let pickle = document.createElement("div")
+		pickle.classList.add("food")
+		document.body.appendChild(pickle)
+	})
+</script>
+
+</body>
+</html>

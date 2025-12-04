@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+		#winnie{
+		width:150px;
+		height:150px;
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size:contain;
+		background-image:url(winnie.gif);
+		
+		}
+	</style>
+
+
+	<title></title>
+</head>
+<body>
+
+	<div id="winnie"></div>
+
+	<script type="text/javascript">
+
+	winnie.style.left="0px"
+
+	document.addEventListener("keypress", function(){
+
+	winnie.style.left = parseInt(winnie.style.left)+10+"px"
+
+	console.log("hi i'm winnie")
+
+	})
+
+</script>
+
+</body>
+</html>

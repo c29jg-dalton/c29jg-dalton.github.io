@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+#speed{
+	width:300px;
+	height:300px;
+	background image: url(speed.png)
+	background-size:contain;
+	background-repeat: no-repeat;
+
+}
+
+#text{
+	width:50px;
+	height:50px
+	border:1px solid black;
+	text-align:center;
+	font-size:50px;
+}
+</style>
+
+</head>
+<body>
+	your score is: <div id="text"></div>
+	<div id="speed"></div>
+
+	<script type="text/javascript">
+
+	let score=0
+
+	speed.addEventListener("click", function(){
+		score=score+1
+		console.log(score)
+		text.innerText=score
+	})
+</script>
+
+</body>
+
+</html>
