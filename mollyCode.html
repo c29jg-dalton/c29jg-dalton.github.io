@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#jocelyn{
+			width:100px;
+			height:100px;
+			background-color:red;
+		}
+
+		#jocelyn2{
+			width:100px;
+			height:100px;
+			background-color:purple;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="jocelyn"></div>
+
+		<div id="jocelyn2"></div>
+
+
+	<audio id="sound" src="xmas.m4a"></audio>
+
+		<audio id="sound2" src="blah.m4a"></audio>
+
+
+	<script type="text/javascript">
+		
+		jocelyn.addEventListener("click", function(){
+			sound.play();
+			jocelyn.style.backgroundColor="green"
+		})
+
+		jocelyn2.addEventListener("click", function(){
+			sound2.play();
+			jocelyn2.style.backgroundColor="pink"
+		})
+	</script>
+
+</body>
+</html>
