@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+			background-color:green;
+		}
+
+	#title{
+		font-size: 50px;
+		font-family:fantasy;
+	
+
+	}
+
+</style>
+
+</head>
+<body>
+
+<center>
+	<div id="title">What should Zara and Jocelyn order during their Tuesday free?</div>
+</center>
+<script type="text/javascript">
+	let foods = ["shakeshack", "wingstop", "chick-fil-a", "playa bowls","smoothies", "sushi"]
+
+	document.addEventListener("click",function(){
+		let random = Math.round(Math.random()*5)
+		console.log(random)
+
+		alert(foods[random])
+	})
+</script>
+</body>
+</html>
