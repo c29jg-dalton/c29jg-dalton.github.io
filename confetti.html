@@ -13,9 +13,31 @@ body{
 	position: absolute;
 	border: 3px solid;
 	background-color: transparent;
+	animation-name: swing3d;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
 	background-image
 }
 
+@keyframes swing {
+	from {
+		transform: rotate(var(--startRot));
+	}
+	to {
+		transform: rotate(var(--endRot));
+	}
+}
+
+@keyframes swing3d {
+	from {
+		transform: rotateX(-25deg) rotateY(-180deg);
+	}
+	to {
+		transform: rotateX(25deg) rotateY(180deg);
+	}
+}
 
 </style>
 </head>
@@ -35,11 +57,16 @@ body{
 		let g = Math.round(Math.random()*255)
 		let b = Math.round(Math.random()*255)
 
+		let startRot = Math.random() * -60 + "deg"
+		let endRot = Math.random()*60 + "deg"
+
 		square.style.top=Math.random()*1000+"px"
 		square.style.left=Math.random()*2000+"px"
 		square.style.width=Math.random()*50+"px"
 		square.style.height=Math.random()*50+"px"
 		square.style.transform="rotate("+rotation+"deg)"
+		square.style.setProperty("--startRot", startRot)
+		square.style.setProperty("--endRot", endRot)
 
 		function fall(){
 			let fallFactor = 50
