@@ -46,6 +46,11 @@ body{
 
 <script type="text/javascript">
 
+let colors = ["#F25F5C", "#FFE066", "#247BA0", "#70C1B3"]
+let table = ["zara", "jocelyn", "matthew", "kendrick"]
+console.log(colors.length)
+console.log(table.length)
+
 	function makeConfetti (){
 		let square = document.createElement("div")
 		square.classList.add("box")
@@ -59,6 +64,10 @@ body{
 
 		let startRot = Math.random() * -60 + "deg"
 		let endRot = Math.random()*60 + "deg"
+
+		let randomColorIndex=Math.floor(Math.random()*colors.length)
+		console.log(randomColorIndex)
+		square.style.backgroundColor=colors[randomColorIndex]
 
 		square.style.top=Math.random()*1000+"px"
 		square.style.left=Math.random()*2000+"px"
@@ -76,12 +85,15 @@ body{
 				square.style.top = Math.random()*150 + "px"
 			}
 		}
-	square.style.borderColor ="rgb("+r+","+g+","+b+")"
+	// square.style.borderColor ="rgb("+r+","+g+","+b+")"
 
 	setInterval(fall,100)
 	}
-
-	setInterval(makeConfetti,100)
+	for(let i=0;i<500;i++){
+		makeConfetti()
+	}
+	
+	// setInterval(makeConfetti,100)
 
 </script>
 
