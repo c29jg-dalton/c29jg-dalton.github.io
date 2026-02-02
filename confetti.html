@@ -21,6 +21,8 @@ body{
 	background-image
 }
 
+.box-orient: ;
+
 @keyframes swing {
 	from {
 		transform: rotate(var(--startRot));
@@ -43,7 +45,9 @@ body{
 </head>
 
 <body>
-
+<button id="btn">drop confetti</button>
+<input type="color" id="colorPicker" value="#ff0000">
+<input type="range"min="1" max="100" step="1" id="slider" value="2">
 <script type="text/javascript">
 
 let colors = ["#F25F5C", "#FFE066", "#247BA0", "#70C1B3"]
@@ -51,7 +55,14 @@ let table = ["zara", "jocelyn", "matthew", "kendrick"]
 console.log(colors.length)
 console.log(table.length)
 
+let dropConfettiBtn=document.getElementById("btn")
+let colorPicker=document.getElementById("colorPicker")
+let slider=document.getElementById("slider")
+
+console.log(slider.value)
+console.log(colorPicker.value)
 	function makeConfetti (){
+
 		let square = document.createElement("div")
 		square.classList.add("box")
 		document.body.appendChild(square)
@@ -67,7 +78,8 @@ console.log(table.length)
 
 		let randomColorIndex=Math.floor(Math.random()*colors.length)
 		console.log(randomColorIndex)
-		square.style.backgroundColor=colors[randomColorIndex]
+
+		square.style.backgroundColor=colorPicker.value
 
 		square.style.top=Math.random()*1000+"px"
 		square.style.left=Math.random()*2000+"px"
@@ -85,16 +97,22 @@ console.log(table.length)
 				square.style.top = Math.random()*150 + "px"
 			}
 		}
+
 	// square.style.borderColor ="rgb("+r+","+g+","+b+")"
 
 	setInterval(fall,100)
+	// }
+	// for(let i=0;i<500;i++){
+	// 	makeConfetti()
+	// }
 	}
-	for(let i=0;i<500;i++){
-		makeConfetti()
-	}
-	
 	// setInterval(makeConfetti,100)
-
+	dropConfettiBtn.addEventListener("click", function(){
+			for(let i=0;i<slider.value;i++){
+				makeConfetti()
+			}
+			
+	})
 </script>
 
 </body>
