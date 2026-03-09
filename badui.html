@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	
+	<style>
+#badbutton{
+	position:absolute;
+	width:70px;
+	height:50px;
+
+}
+	
+	</style>
+
+</head>
+
+<body>
+	<button id="badbutton">can't click me!</button>
+
+	<script>
+let badbutton = document.getElementById("badbutton")
+console.log(badbutton)
+
+badbutton.addEventListener("click", function(){
+	console.log("click!")
+})
+badbutton.addEventListener("mouseover",function(){
+	console.log("mouse is over!")
+	badbutton.style.top=Math.random()*900+"px"
+	badbutton.style.left=Math.random()*900+"px"
+	badbutton.style.height=Math.random()*100+"px"
+
+})
+badbutton.addEventListener("mouseout",function(){
+	console.log("mouse is gone!")
+	badbutton.textContent="loser"
+})
+
+
+	</script>
+
+
+</body>
+</html>
