@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+
+</head>
+<body>
+	<script> 
+function setup() {
+  createCanvas(2000, 1000);
+}
+//this is a nested for loop = grid of shapes
+function draw() {
+  background("#485665")
+  for(let i=0; i<400; i++){
+    for(let j=0; j<100;j++){
+      let x=i*100
+      let y=j*100
+
+      let d = dist(x,y,mouseX,mouseY)
+     push()
+     translate(x,y)
+     rotate(frameCount * 0.1)
+     fill("#D0A5C0")
+      circle(0,0,130)  
+      fill("#F6C0D0")
+      circle(0,0,100)
+      fill("#8E7C93") 
+      circle(0,0,50)
+      circle(0,0,10) 
+      fill("#D0A5C0")
+      circle(0,0,100)
+      circle(10, 10, 50)
+      if(d<50){
+      }
+      pop()
+  
+    
+    }
+  
+
+  }
+}
+	</script>
+</body>
+</html>
